@@ -1,0 +1,177 @@
+body {
+  text-align: center;
+  background: url("https://images.unsplash.com/photo-1437419764061-2473afe69fc2?dpr=1.25&auto=format&fit=crop&w=1199&h=674&q=80&cs=tinysrgb&crop=");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeate: none;
+  background-size: cover;
+}
+
+#calculator {
+  width: 250px;
+  height: 350px;
+  border: 25px solid rgb(255, 130, 0);
+  border-radius: 20px;
+  padding: 2.5px;
+  margin: auto;
+  margin-bottom: 2.5%;
+  box-shadow: 0px 8px rgb(232, 104, 0), 0px 10px 15px rgb(232, 104, 0);
+  background: rgb(128, 128, 128);
+}
+
+.screen {
+  width: auto;
+  height: 50px;
+  border: 5px solid rgb(255, 130, 0);
+  border-radius: 5px;
+  padding: 1px;
+  margin-top: 2.5px;
+  margin-bottom: 2px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+  /* Typography */
+  font-size: 1em;
+  line-height: 40px;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  text-align: right;
+  letter-spacing: 1px;
+}
+
+
+/*Larger buttons for operators and clear*/
+
+.calcButtons span.clear,
+span.operator {
+  float: right;
+  position: relative;
+  top: 0;
+  margin: .1px 1px 3.5px 3px;
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+  /* prevent selection of text inside button */
+  user-select: none;
+  /* Smoothing out hover and active states using css3 transitions */
+  transition: all 0.1s ease;
+  /* Typography */
+  font-size: 19px;
+  line-height: 40px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+
+/*button size for digits and enter*/
+
+.calcButtons span.digit,
+span.eval {
+  float: left;
+  position: relative;
+  top: 0;
+  margin: 10px 5px 7px 3px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0px 4px #e5e5e5;
+  /* prevent selection of text inside buttons */
+  user-select: none;
+  /* Smoothing out hover and active states using css3 transitions */
+  transition: all 0.1s ease;
+  /* Typography */
+  font-size: 19px;
+  line-height: 36px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #888;
+}
+
+
+/* style different type of buttons (operators/enter/clear/digit) differently */
+
+.calcButtons span.operator {
+  float: right;
+  background: rgb(0, 172, 237);
+  color: white;
+  box-shadow: 0px 4px#018dc1;
+}
+
+.calcButtons span.eval {
+  background: rgb(222, 255, 0);
+  box-shadow: 0px 4px #9da853;
+  color: #888e5f;
+}
+
+.calcButtons span.clear {
+  float: right;
+  background: rgb(255, 81, 97);
+  box-shadow: 0px 4px #db3242;
+  color: white;
+}
+
+
+/* Some hover effects */
+
+.calcButtons span:hover {
+  background: #d8d8d8;
+  /*#9c89f6;*/
+  box-shadow: 0px 4px #bfbfbf;
+  /* #6b54d3; */
+  color: white;
+}
+
+.calcButtons span.eval:hover {
+  background: #abb850;
+  box-shadow: 0px 4px #717a33;
+  color: #ffffff;
+}
+
+.calcButtons span.clear:hover {
+  background: #ce0e20;
+  box-shadow: 0px 4px #890915;
+  color: white;
+}
+
+.calcButtons span.operator:hover {
+  background: rgb(0, 127, 175);
+  box-shadow: 0px 4px #005575;
+  color: white;
+}
+
+
+/* Simulating "pressed" effect on active state of the keys by removing the box-shadow and moving the keys down a bit */
+
+.calcButtons span:active {
+  box-shadow: 0px 0px #9c89f6;
+  top: 4px;
+}
+
+.calcButtons span.eval:active {
+  box-shadow: 0px 0px #abb850;
+  top: 4px;
+}
+
+.calcButtons span.clear:active {
+  top: 4px;
+  box-shadow: 0px 0px #ce0e20;
+}
+
+.calcButtons span.operator:active {
+  top: 4px;
+  box-shadow: 0px 0px rgb(0, 127, 175);
+}
+
+h1 {
+  color: white;
+  font-size: 3.3vw;
+  width: auto;
+  hight: auto;
+  border: 10px solid white;
+  padding: 20px;
+  margin: 2.5% 15% 2.5% 15%;
+}
